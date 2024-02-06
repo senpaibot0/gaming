@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background-image: url("../img/Bricks_bg.jpg");
+    background-position: center top;
+}
+#myCanvas
+{
+    size: 1100px 720px;
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+
+#container
+{
+    width:1400px;
+    margin:auto;
+    margin-top: 70px;
+    position: relative;
+    visibility: hidden;
+}
+
+#btnStart{
+    position: absolute;
+    width: 444px;
+    height: 104px;
+    top: 74%;
+    left: 33%;
+    background: url("../img/btnStart.png");
+    border-style: none;
+}
+
+#btnReset{
+    font-family: "Fredoka One", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    text-shadow: 2px 2px #000000, -2px -2px #444;
+    color: #eeeeee;
+    position: absolute;
+    width: 444px;
+    height: 104px;
+    top: 74%;
+    left: 33%;
+    background: #181717;
+    border-style: none;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.segment {
+    width: 0px;
+    height: 25px;
+    background-color: green;
+    float: left;
+}
+#loading
+{
+    position: absolute;
+    top:50%;
+    left: 30%;
+    text-align: center;
+    opacity: 0;
+}
+#barre {
+    width: 500px;
+    height: 25px;
+    border: solid black 4px;
+}
+.loadtext, #message
+{
+    color: #eeeeee;
+    font-size: xxx-large;
+    font-family: "Eras Bold ITC", "Arial Black", serif;
+}
+
+#right
+{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #eeeeee;
+    width: 145px;
+    margin-right: -10px;
+}
+#viesnombre
+{
+    padding-left: 50px;
+    font-size: 70px;
+}
+
+#lifebar
+{
+    margin-left: 8px;
+    width: 134px;
+    height: 51px;
+    background: url("../img/sprite_barre_de_vies.png") 0 0;
+    background-size: 564px 51px;
+}
+
+.animate {
+    max-width: 145px;
+    font-family: 'Lato', sans-serif;
+    color: #999999;
+    word-wrap:break-word;
+    font-size: 48px;
+    font-weight: bolder;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.animate span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left: -12px;
+}
+
+
+
+.animate span:nth-of-type(2) {
+    animation-delay: .5s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: 1s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: 1.5s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: 2s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: 2.5s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: 3s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: 3.5s;
+}
+/* Animation Seven */
+
+
+.seven span {
+    color: #348c04;
+    opacity: 1;
+}
+
+.go{
+    opacity: 0;
+    transform: translate(-150px, 0) scale(.3);
+    animation: leftRight .8s forwards;
+}
+@keyframes leftRight {
+    40% {
+        transform: translate(50px, 0) scale(.7);
+        opacity: 1;
+        color: #348c04;
+    }
+
+    60% {
+        color: #0f40ba;
+    }
+
+    80% {
+        transform: translate(0) scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
+#success{
+    height: 537px;
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../img/succes.png");
+    visibility: hidden;
+    opacity: 0;
+}
+
+#message{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+#countDownSplash{
+    margin:auto;
+    height:690px;
+    width: 1070px;
+    font-family:"Fredoka One",sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#111;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+}
+.text-animation {
+    position:relative;
+    font-size:80px;
+    font-weight:600;
+    color:#eee;
+    width:100vw;
+    height:200px;
+    text-align:center;
+    line-height:200px;
+    overflow:hidden;
+}
+
+
+
+.text-animation span {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity:1;
+    text-transform:uppercase;
+    letter-spacing:5px;
+}
+
+.container,
+.top{
+    width: 275px;
+    height: 180px;
+}
+
+h3 {
+    margin: 0 0 30px;
+}
+
+.container {
+    width: 275px;
+    height: 180px;
+    margin: 0 auto 1em;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+}
+
+.text {
+    font-size: 30px;
+}
+
+.top,
+.bottom,
+.single {
+    position: absolute;
+    bottom: 0;
+    line-height: 130px;
+    border-radius: 2px;
+}
+
+.top {
+    text-align: center;
+    color: white;
+    background-image: url("../img/game_over.png");
+    background-size: contain;
+    /*   -webkit-transform: rotateX(45deg); */
+    /* -ms-transform: rotateX(45deg); */
+    /*  transform: rotateX(45deg); */
+}
+
+.style-3d .top{
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+#gameOver {
+    margin:auto;
+    height:690px;
+    width: 1070px;
+    font-family:"Fredoka One",sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    visibility: hidden;
+}

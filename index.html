@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/lib/anime.min.js"></script>
+</head>
+<body  onload="delayAnimationSplash()" onmousedown="MouseClick(event)">
+<div class="big">
+    <audio id="myAudio">
+    </audio>
+    <audio id="soundEffect">
+    </audio>
+    <audio id="soundEffect2">
+    </audio>
+</div>
+<div id="container">
+    <canvas id="myCanvas"></canvas>
+    <button id="btnStart"  onclick="falseLoad()" type="button"></button>
+    <button id="btnReset"  onclick="reload()" type="button">RECOMMENCER</button>
+    <div id="loading">
+        <div id="barre">
+            <div class="segment"></div>
+            <div class="segment"></div>
+            <div class="segment"></div>
+            <div class="segment"></div>
+            <div class="segment"></div>
+        </div>
+        <p class="loadtext">Chargement...</p>
+    </div>
+    <div id="right">
+        <div id="lifes">
+            <h3 id="vieslabel">VIES</h3>
+            <div id="lifebar"></div>
+        </div>
+        <div id="score">
+            <h3 id="scorelabel">SCORE</h3>
+            <div id="scorenombre" class="animate seven">
+                <span id="score6"></span>
+                <span id="score5"></span>
+                <span id="score4"></span>
+                <span id="score3"></span>
+                <span id="score2"></span>
+                <span id="score1"></span>
+                <span id="score0">0</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<p id="message">C'est un test de message</p>
+<div id="success"></div>
+<div id="countDownSplash">
+    <div class="text-animation">
+        <span class="one">Ready</span>
+        <span class="two">Set</span>
+        <span class="three">GO!</span>
+    </div>
+</div>
+<div id="gameOver">
+    <div class="container style-3d">
+        <div class="top">
+
+        </div>
+    </div>
+</div>
+
+<script src="js/gameScript.js"></script>
+
+</body>
+</html>
